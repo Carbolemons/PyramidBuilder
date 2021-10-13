@@ -8,7 +8,8 @@ package pyramidbuilder;
  | |   | |_| | | | (_| | | | | | | | (_| | |__| | (_| | | | | | |  __/
  |_|    \__, |_|  \__,_|_| |_| |_|_|\__,_|\_____|\__,_|_| |_| |_|\___|
          __/ |   by: Lee C. (Carbolemons) 2021                                                     
-        |___/                                                                                                                
+        |___/         
+                                                                                                               
 // references:
 // https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797 // for ANSI Escape code knowledge and information
 // https://www.asciiart.eu/space/aliens // for cute alien art

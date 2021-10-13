@@ -8,7 +8,8 @@ package lcurses;
  | |___| |___| |_| | |  \__ \  __/\__ \
  |______\_____\__,_|_|  |___/\___||___/
                                                          
-// This class is for managing color codes and ANSI cursor positioning
+// This 'interface' is for managing color codes and ANSI cursor positioning. Nothing too fancy at all however. 
+
 // https://en.wikipedia.org/wiki/ANSI_escape_code                       -- Explanation of ANSI
 // https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797        -- ANSI Escape codes
 
@@ -18,12 +19,12 @@ public interface LCurses { // DCurses, as, "Dylan Curses" a primitive text """dr
 
     // Draw function overloaded handling multiple ways to draw ANSI text to screen
     public static void draw(String out, ANSI color, ANSI bg, int x, int y) { // String out, ANSI color, ANSI bg, int x, int y
-        String pos = "\033[" + y + ";" + x +"f";
+        String pos = ANSI.ESC.toString() + y + ";" + x +"f";
         System.out.print(color.toString() + bg.toString() + pos + out);
     }
 
     public static void draw(String out, ANSI color, int x, int y) { // String out, ANSI color, int x, int y
-        String pos = "\033[" + y + ";" + x +"f";
+        String pos = ANSI.ESC.toString() + y + ";" + x +"f";
         System.out.print(ANSI.RST + color.toString() + pos + out);
     }
 
